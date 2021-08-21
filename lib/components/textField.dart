@@ -35,6 +35,10 @@ Widget textFormField({
   bool showBorderRound = true,
   Color borderColor = PRIMARYCOLOR,
   TextCapitalization textCapitalization = TextCapitalization.sentences,
+  int? maxLength,
+  double borderWidth = 1,
+  double borderRadius = 20,
+  bool isDense = false,
 }) {
   return Container(
     width: width,
@@ -48,6 +52,7 @@ Widget textFormField({
       controller: controller,
       minLines: minLine,
       maxLines: maxLine,
+      maxLength: maxLength,
       focusNode: focusNode,
       autofocus: false,
       textInputAction: inputAction,
@@ -61,6 +66,7 @@ Widget textFormField({
       },
       onChanged: onTextChange == null ? null : (text) => onTextChange(text),
       decoration: InputDecoration(
+        isDense: isDense,
         hintText: hintText,
         hintStyle: TextStyle(color: ASHDEEP),
         labelText: labelText,
@@ -80,37 +86,65 @@ Widget textFormField({
             ? InputBorder.none
             : showBorderRound
                 ? OutlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   )
                 : UnderlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   ),
         disabledBorder: removeBorder
             ? InputBorder.none
             : showBorderRound
                 ? OutlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   )
                 : UnderlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   ),
         focusedBorder: removeBorder
             ? InputBorder.none
             : showBorderRound
                 ? OutlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   )
                 : UnderlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   ),
         border: removeBorder
             ? InputBorder.none
             : showBorderRound
                 ? OutlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   )
                 : UnderlineInputBorder(
-                    borderSide: BorderSide(color: borderColor, width: 1),
+                    borderSide: BorderSide(
+                      color: borderColor,
+                      width: borderWidth,
+                    ),
                   ),
         errorStyle: TextStyle(
           color: Colors.red,
