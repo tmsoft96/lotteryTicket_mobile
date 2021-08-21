@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottery_ticket/spec/colors.dart';
 import 'package:lottery_ticket/spec/styles.dart';
 
-import 'pages/onboarding/splashScreen.dart';
+import 'pages/homepage/homepage.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: Homepage(),
     );
   }
 }
