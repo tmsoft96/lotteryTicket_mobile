@@ -32,6 +32,7 @@ dependencies:
   fluttertoast: ^7.1.8
   connectivity: ^3.0.3
   shared_preferences: ^2.0.5
+  flutter_feather_icons: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:
@@ -54,6 +55,7 @@ flutter:
     - assets/images/defaultProfilePic.png
     - assets/images/imageLoadingError.png
     - assets/images/waiting.png
+    - assets/images/dice.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
