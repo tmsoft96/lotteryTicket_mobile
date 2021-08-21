@@ -15,7 +15,8 @@ Widget ticketLayout({
         tileColor: WHITE,
         leading: cachedImage(
           context: context,
-          image: "",
+          image:
+              "https://www.logofootball.net/wp-content/uploads/OGC-Nice-Logo.png",
           height: 40,
           width: 40,
         ),
@@ -35,7 +36,8 @@ Widget ticketLayout({
               children: [
                 cachedImage(
                   context: context,
-                  image: "",
+                  image:
+                      "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg",
                   height: 25,
                   width: 40,
                 ),

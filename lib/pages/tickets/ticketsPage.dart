@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottery_ticket/components/button.dart';
-import 'package:lottery_ticket/components/cachedImage.dart';
 import 'package:lottery_ticket/spec/colors.dart';
 import 'package:lottery_ticket/spec/styles.dart';
 
