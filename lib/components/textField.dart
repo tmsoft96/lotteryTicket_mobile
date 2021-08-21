@@ -32,7 +32,7 @@ Widget textFormField({
   void Function(String text)? onTextChange,
   @required FocusNode? focusNode,
   bool readOnly = false,
-  bool showBorderRound = false,
+  bool showBorderRound = true,
   Color borderColor = PRIMARYCOLOR,
   TextCapitalization textCapitalization = TextCapitalization.sentences,
 }) {

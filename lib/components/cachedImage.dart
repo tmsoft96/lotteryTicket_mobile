@@ -30,6 +30,6 @@ Widget cachedImage({
         CircularProgressIndicator(color: PRIMARYCOLOR),
       ],
     ),
-    imageUrl: image,
+    imageUrl: image!,
   );
 }

@@ -69,6 +69,12 @@ const TextStyle h6White = TextStyle(
   color: WHITE,
 );
 
+const TextStyle h6Black = TextStyle(
+  fontSize: 13,
+  fontWeight: FontWeight.w400,
+  color: BLACK,
+);
+
 //ASHDEEP
 const TextStyle h5Ashdeep = TextStyle(
   fontSize: 13,
@@ -153,6 +159,12 @@ const TextStyle h6AshDeep = TextStyle(
 );
 
 //Primary
+const TextStyle h2Primary = TextStyle(
+  fontSize: 25,
+  fontWeight: FontWeight.bold,
+  color: PRIMARYCOLOR,
+);
+
 const TextStyle h3Primary = TextStyle(
   fontSize: 22,
   fontWeight: FontWeight.w600,

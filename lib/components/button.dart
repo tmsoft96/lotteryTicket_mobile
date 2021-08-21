@@ -11,13 +11,15 @@ Widget button({
   @required BuildContext? context,
   double divideWidth = 1.0,
   bool useWidth = true,
-  double buttonRadius = 5,
+  double buttonRadius = 20,
   double height = 40,
   double? elevation,
   Color background = BACKGROUND,
   TextStyle? textStyle,
   Widget? icon,
+  Widget? postFixIcon,
   bool showBorder = true,
+  EdgeInsetsGeometry? padding,
 }) {
   return SizedBox(
     width: useWidth ? MediaQuery.of(context!).size.width * divideWidth : null,
@@ -25,23 +27,27 @@ Widget button({
     child: ElevatedButton(
       onPressed: onPressed,
       onLongPress: onLongPressed,
-      child: icon == null
+      child: icon == null && postFixIcon == null
           ? Text("$text")
           : Row(
               children: [
-                icon,
+                if (icon != null) icon,
                 SizedBox(width: 10),
                 Text("$text"),
+                if (postFixIcon != null) postFixIcon,
               ],
             ),
       style: ElevatedButton.styleFrom(
         elevation: elevation,
         onPrimary: textColor,
+        padding: padding,
         primary: colorFill ? color : background,
-        shape: showBorder ? RoundedRectangleBorder(
-          side: BorderSide(color: color!),
-          borderRadius: BorderRadius.circular(buttonRadius),
-        ) : null,
+        shape: showBorder
+            ? RoundedRectangleBorder(
+                side: BorderSide(color: color!),
+                borderRadius: BorderRadius.circular(buttonRadius),
+              )
+            : null,
         textStyle: textStyle == null ? TextStyle(fontSize: 18) : textStyle,
       ),
     ),

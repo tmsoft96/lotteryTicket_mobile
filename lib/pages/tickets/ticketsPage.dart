@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lottery_ticket/components/button.dart';
 import 'package:lottery_ticket/components/cachedImage.dart';
 import 'package:lottery_ticket/spec/colors.dart';
 import 'package:lottery_ticket/spec/styles.dart';
+
+import 'widget/ticketLayout.dart';
 
 class Tickets extends StatefulWidget {
   const Tickets({Key? key}) : super(key: key);
@@ -21,8 +24,7 @@ class _TicketsState extends State<Tickets> {
           child: Text("Lottery Ticket", style: h4WhiteBold),
         ),
         Container(
-          margin: EdgeInsets.only(top: 50),
-          padding: EdgeInsets.symmetric(vertical: 10),
+          margin: EdgeInsets.only(top: 80),
           decoration: BoxDecoration(
             color: WHITE,
             borderRadius: BorderRadius.only(
@@ -33,15 +35,11 @@ class _TicketsState extends State<Tickets> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                ListTile(
-                  tileColor: WHITE,
-                  leading: cachedImage(
-                    context: context,
-                    image: "",
-                    height: 50,
-                    width: 50,
-                  ),
-                ),
+                SizedBox(height: 30),
+                for (int x = 0; x < 10; ++x) ...[
+                  ticketLayout(context: context),
+                ],
+                SizedBox(height: 30),
               ],
             ),
           ),

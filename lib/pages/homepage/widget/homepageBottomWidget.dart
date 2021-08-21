@@ -28,7 +28,7 @@ Widget homepageBottomWidget({
               onPressed: onTicket,
             ),
             _button(
-              icon: Icons.home,
+              icon: FeatherIcons.home,
               color: index == 1 ? WHITE : TRANSPARENT,
               onPressed: onHome,
             ),
