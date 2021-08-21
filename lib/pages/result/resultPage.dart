@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottery_ticket/components/diceBackground.dart';
+import 'package:lottery_ticket/config/navigation.dart';
 
 import 'widget/resultWidget.dart';
 
@@ -17,7 +18,7 @@ class _ResultPageState extends State<ResultPage> {
           diceBackground(context),
           SafeArea(
             child: resultWidget(
-              onback: () {},
+              onback: () => navigation(context: context, pageName: "back"),
               context: context,
               onSeeReult: () {},
             ),

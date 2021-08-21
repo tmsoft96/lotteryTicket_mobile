@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:lottery_ticket/components/button.dart';
 import 'package:lottery_ticket/components/textField.dart';
 import 'package:lottery_ticket/spec/colors.dart';
@@ -25,6 +26,7 @@ Widget resultWidget({
         alignment: Alignment.center,
         child: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               padding: EdgeInsets.symmetric(
@@ -42,28 +44,52 @@ Widget resultWidget({
                     hintText: "Jackports",
                     controller: null,
                     focusNode: null,
-                    
+                    isDense: true,
+                    borderColor: ASHDEEP,
+                    backgroundColor: ASHDEEP,
+                    hintColor: BLACK,
+                    prefixIcon: FeatherIcons.aperture,
+                    prefixIconColor: BLACK,
                   ),
-                  Text("Selected Numbers", style: h5BlackBold),
                   SizedBox(height: 10),
-                  Text("Number of Draws", style: h5BlackBold),
+                  textFormField(
+                    hintText: "30 May 2021",
+                    controller: null,
+                    focusNode: null,
+                    isDense: true,
+                    borderColor: ASHDEEP,
+                    backgroundColor: ASHDEEP,
+                    hintColor: BLACK,
+                    prefixIcon: Icons.card_giftcard,
+                    prefixIconColor: BLACK,
+                    icon: Icons.calendar_today,
+                    iconColor: BLACK,
+                  ),
+                  SizedBox(height: 10),
+                  Text("Enter Your Number", style: h5BlackBold),
                   SizedBox(height: 10),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      for (int x = 0; x < 3; ++x) ...[
+                      for (int x = 0; x < 5; ++x) ...[
                         CircleAvatar(
-                          backgroundColor: PRIMARYCOLOR,
-                          child: Text("${x + 1}", style: h5WhiteBold),
+                          backgroundColor: ASHDEEP,
+                          child: Text("${x + 1}", style: h5BlackBold),
                         ),
                         SizedBox(width: 10),
                       ],
                     ],
                   ),
-                  SizedBox(height: 10),
-                  Text("Posible Winners", style: h5BlackBold),
-                  SizedBox(height: 10),
-                  Text("\$100 - \$1200", style: h5BlackBold),
+                  SizedBox(height: 20),
+                  button(
+                    onPressed: onSeeReult,
+                    textStyle: h5WhiteBold,
+                    text: "See result",
+                    color: PRIMARYCOLOR,
+                    context: context,
+                    textColor: WHITE,
+                    elevation: 0,
+                    divideWidth: .9,
+                  ),
                 ],
               ),
             ),

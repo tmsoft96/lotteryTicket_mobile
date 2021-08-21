@@ -15,6 +15,7 @@ Widget textFormField({
   Color? cursorColor,
   Color textColor = PRIMARYCOLOR,
   Color labelColor = PRIMARYCOLOR,
+  Color hintColor = ASHDEEP,
   Color backgroundColor = WHITE,
   @required TextEditingController? controller,
   bool validate = true,
@@ -68,7 +69,7 @@ Widget textFormField({
       decoration: InputDecoration(
         isDense: isDense,
         hintText: hintText,
-        hintStyle: TextStyle(color: ASHDEEP),
+        hintStyle: TextStyle(color: hintColor),
         labelText: labelText,
         labelStyle: TextStyle(color: labelColor),
         filled: true,
