@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:lottery_ticket/components/button.dart';
-import 'package:lottery_ticket/components/textField.dart';
 import 'package:lottery_ticket/spec/colors.dart';
+import 'package:lottery_ticket/spec/images.dart';
 import 'package:lottery_ticket/spec/styles.dart';
 
-Widget resultWidget({
+Widget winResultWidget({
   @required void Function()? onback,
   @required BuildContext? context,
 }) {
@@ -41,10 +39,13 @@ Widget resultWidget({
                 children: [
                   Text(
                     "Congratulation! You are a Big Winner...",
-                    style: h2Black,
+                    style: h3BlackBold,
+                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 10),
-                  
+                  Image.asset(WINNER),
+                  SizedBox(height: 10),
+                  Text("You get \$2500", style: h3BlackBold),
                 ],
               ),
             ),
